@@ -1,0 +1,13 @@
+SceneMesh mesh = SceneMesh.Create(compositor);
+mesh.PrimitiveTopology = DirectXPrimitiveTopology.TriangleList;
+mesh.FillMeshAttribute(
+    SceneAttributeSemantic.Vertex,
+    DirectXPixelFormat.R32G32B32Float,
+    SceneNodePlaygroundMeshData.CreatePositionBuffer());
+
+SceneMetallicRoughnessMaterial material = SceneMetallicRoughnessMaterial.Create(compositor);
+material.BaseColorFactor = new Vector4(0.22f, 0.75f, 0.43f, 1.0f);
+
+SceneMeshRendererComponent renderer = SceneMeshRendererComponent.Create(compositor);
+renderer.Mesh = mesh;
+renderer.Material = material;

@@ -1,0 +1,13 @@
+CompositionPropertySet propertySet = compositor.CreatePropertySet();
+propertySet.InsertScalar("Rotation", 0);
+propertySet.InsertVector3("CenterPointOffset", new Vector3(37.5f, 37.5f, 0));
+
+Vector3Node centerPoint = propertySet.GetReference().GetVector3Property("CenterPointOffset");
+ScalarNode rotation = propertySet.GetReference().GetScalarProperty("Rotation");
+Vector3Node orbitExpression = redSprite.GetReference().Offset + centerPoint +
+    ExpressionFunctions.Vector3(
+        ExpressionFunctions.Cos(ExpressionFunctions.ToRadians(rotation)) * 150,
+        ExpressionFunctions.Sin(ExpressionFunctions.ToRadians(rotation)) * 75,
+        0);
+
+blueSprite.StartAnimation("Offset", orbitExpression);

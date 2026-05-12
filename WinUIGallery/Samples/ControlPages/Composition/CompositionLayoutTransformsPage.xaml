@@ -1,0 +1,61 @@
+<Page
+    x:Class="WinUIGallery.ControlPages.CompositionLayoutTransformsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:WinUIGallery.Controls"
+    xmlns:local="using:WinUIGallery.ControlPages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel>
+        <controls:ControlExample
+            CSharpSource="Composition/CompositionLayoutTransformsSample_cs.txt"
+            HeaderText="Adjust Composition transform properties"
+            Loaded="LayoutTransformsExample_Loaded"
+            Unloaded="LayoutTransformsExample_Unloaded"
+            XamlSource="Composition/CompositionLayoutTransformsSample_xaml.txt">
+            <Grid MinHeight="420" ColumnSpacing="24">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="280" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <ScrollViewer
+                    MaxHeight="420"
+                    HorizontalScrollMode="Disabled"
+                    HorizontalScrollBarVisibility="Disabled"
+                    VerticalScrollMode="Auto"
+                    VerticalScrollBarVisibility="Auto">
+                    <ItemsControl x:Name="TransformItemsControl">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate x:DataType="local:CompositionTransformPropertyModel">
+                                <Slider
+                                    Margin="0,0,12,18"
+                                    Header="{x:Bind PropertyName}"
+                                    Maximum="{x:Bind MaxValue}"
+                                    Minimum="{x:Bind MinValue}"
+                                    StepFrequency="{x:Bind StepFrequency}"
+                                    Value="{Binding Value, Mode=TwoWay}" />
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+
+                <Grid
+                    x:Name="ContentGrid"
+                    Grid.Column="1"
+                    MinHeight="420"
+                    Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                    SizeChanged="ContentGrid_SizeChanged">
+                    <Grid
+                        x:Name="ImageContainer"
+                        Width="400"
+                        Height="267"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center" />
+                </Grid>
+            </Grid>
+        </controls:ControlExample>
+    </StackPanel>
+</Page>

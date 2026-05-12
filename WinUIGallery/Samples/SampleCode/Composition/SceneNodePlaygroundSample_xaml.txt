@@ -1,0 +1,3 @@
+<Grid x:Name="SceneHost"
+      Height="420"
+      SizeChanged="SceneHost_SizeChanged" />

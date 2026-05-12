@@ -1,0 +1,29 @@
+<Page
+    x:Class="WinUIGallery.ControlPages.CompositionPropertySetsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:WinUIGallery.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel>
+        <controls:ControlExample
+            CSharpSource="Composition/CompositionPropertySetsSample_cs.txt"
+            HeaderText="Drive an orbiting visual with ExpressionAnimation and CompositionPropertySet"
+            Loaded="PropertySetsExample_Loaded"
+            Unloaded="PropertySetsExample_Unloaded"
+            XamlSource="Composition/CompositionPropertySetsSample_xaml.txt">
+            <Grid
+                x:Name="OrbitHost"
+                Height="360"
+                Background="{ThemeResource CardBackgroundFillColorDefaultBrush}">
+                <TextBlock
+                    Margin="12"
+                    Style="{ThemeResource BodyTextBlockStyle}"
+                    Text="The small blue sprite follows an expression that reads both the red sprite and a rotating property set."
+                    TextWrapping="Wrap" />
+            </Grid>
+        </controls:ControlExample>
+    </StackPanel>
+</Page>

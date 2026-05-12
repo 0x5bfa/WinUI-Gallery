@@ -1,0 +1,5 @@
+<Grid x:Name="ImageContainer"
+      Width="400"
+      Height="267"
+      HorizontalAlignment="Center"
+      VerticalAlignment="Center" />

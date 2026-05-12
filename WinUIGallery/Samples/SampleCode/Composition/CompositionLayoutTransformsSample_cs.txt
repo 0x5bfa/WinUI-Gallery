@@ -1,0 +1,11 @@
+LoadedImageSurface surface = LoadedImageSurface.StartLoadFromUri(
+    new Uri("ms-appx:///Assets/SceneGraph/Landscapes/Landscape-1.jpg"));
+
+CompositionSurfaceBrush brush = compositor.CreateSurfaceBrush(surface);
+brush.Stretch = CompositionStretch.Fill;
+
+SpriteVisual imageVisual = compositor.CreateSpriteVisual();
+imageVisual.Brush = brush;
+imageVisual.Size = new Vector2(400, 267);
+imageVisual.CenterPoint = new Vector3(200, 133.5f, 0);
+imageVisual.RotationAngleInDegrees = 30;

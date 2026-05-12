@@ -3345,6 +3345,125 @@
       ]
     },
     {
+      "UniqueId": "Composition",
+      "Title": "Composition",
+      "IconGlyph": "",
+      "Folder": "Composition",
+      "Items": [
+        {
+          "UniqueId": "CompositionXamlInterop",
+          "Title": "XAML interop",
+          "ApiNamespace": "Microsoft.UI.Xaml.Hosting",
+          "Subtitle": "Use ElementCompositionPreview to animate XAML elements and host Composition visuals in XAML.",
+          "ImagePath": "ms-appx:///Assets/ControlImages/Composition/CompositionXamlInterop.png",
+          "Description": "Use ElementCompositionPreview.GetElementVisual and SetElementChildVisual to bridge XAML elements with Microsoft.UI.Composition visuals.",
+          "IsNew": true,
+          "Docs": [
+            {
+              "Title": "Composition visual layer",
+              "Uri": "https://learn.microsoft.com/windows/apps/windows-app-sdk/composition"
+            },
+            {
+              "Title": "ElementCompositionPreview - API",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.hosting.elementcompositionpreview"
+            }
+          ],
+          "RelatedControls": [
+            "XamlCompInterop"
+          ]
+        },
+        {
+          "UniqueId": "CompositionLayoutTransforms",
+          "Title": "Layout and transforms",
+          "ApiNamespace": "Microsoft.UI.Composition",
+          "Subtitle": "Explore how AnchorPoint, CenterPoint, Offset, Rotation, and Scale affect a SpriteVisual.",
+          "ImagePath": "ms-appx:///Assets/ControlImages/Composition/CompositionLayoutTransforms.png",
+          "Description": "Adjust Composition visual transform properties and compare how anchor and center points change positioning and rotation.",
+          "IsNew": true,
+          "Docs": [
+            {
+              "Title": "Visual - API",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.visual"
+            },
+            {
+              "Title": "SpriteVisual - API",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.spritevisual"
+            }
+          ],
+          "RelatedControls": [
+            "CompositionXamlInterop"
+          ]
+        },
+        {
+          "UniqueId": "CompositionPropertySets",
+          "Title": "Property sets",
+          "ApiNamespace": "Microsoft.UI.Composition",
+          "Subtitle": "Drive an expression animation with values stored in a CompositionPropertySet.",
+          "ImagePath": "ms-appx:///Assets/ControlImages/Composition/CompositionPropertySets.png",
+          "Description": "Use CompositionPropertySet with ExpressionAnimation to animate one visual relative to another visual and shared property values.",
+          "IsNew": true,
+          "Docs": [
+            {
+              "Title": "CompositionPropertySet - API",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.compositionpropertyset"
+            },
+            {
+              "Title": "ExpressionAnimation - API",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.expressionanimation"
+            }
+          ],
+          "RelatedControls": [
+            "CompositionXamlInterop"
+          ]
+        },
+        {
+          "UniqueId": "CompositionCapabilities",
+          "Title": "Composition capabilities",
+          "ApiNamespace": "Microsoft.UI.Composition",
+          "Subtitle": "Detect effect support and adjust Composition effects based on hardware capabilities.",
+          "ImagePath": "ms-appx:///Assets/ControlImages/Composition/CompositionCapabilities.png",
+          "Description": "Use CompositionCapabilities to decide whether to apply advanced effects such as blur and saturation.",
+          "IsNew": true,
+          "Docs": [
+            {
+              "Title": "CompositionCapabilities - API",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.compositioncapabilities"
+            },
+            {
+              "Title": "Composition effects",
+              "Uri": "https://learn.microsoft.com/windows/apps/windows-app-sdk/composition"
+            }
+          ],
+          "RelatedControls": [
+            "CompositionPropertySets"
+          ]
+        },
+        {
+          "UniqueId": "SceneNodePlayground",
+          "Title": "SceneNode playground",
+          "ApiNamespace": "Microsoft.UI.Composition.Scenes",
+          "Subtitle": "Render a simple 3D SceneMesh through the Composition scene graph APIs.",
+          "ImagePath": "ms-appx:///Assets/ControlImages/Composition/SceneNodePlayground.png",
+          "Description": "Create a SceneNode tree, fill a SceneMesh with vertex/index buffers, and animate the mesh with Composition.",
+          "IsNew": true,
+          "Docs": [
+            {
+              "Title": "SceneNode - API",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.scenes.scenenode"
+            },
+            {
+              "Title": "SceneMesh - API",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.scenes.scenemesh"
+            }
+          ],
+          "RelatedControls": [
+            "ContentIsland",
+            "CompositionXamlInterop"
+          ]
+        }
+      ]
+    },
+    {
       "UniqueId": "Motion",
       "Title": "Motion",
       "IconGlyph": "",

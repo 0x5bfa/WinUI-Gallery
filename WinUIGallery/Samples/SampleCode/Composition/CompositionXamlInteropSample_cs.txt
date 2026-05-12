@@ -1,0 +1,12 @@
+Visual textVisual = ElementCompositionPreview.GetElementVisual(AnimatedTextBlock);
+Compositor compositor = textVisual.Compositor;
+
+Vector3KeyFrameAnimation offsetAnimation = compositor.CreateVector3KeyFrameAnimation();
+offsetAnimation.InsertKeyFrame(0.5f, new Vector3(100, 0, 0));
+offsetAnimation.InsertKeyFrame(1.0f, Vector3.Zero);
+offsetAnimation.Duration = TimeSpan.FromSeconds(4);
+offsetAnimation.IterationBehavior = AnimationIterationBehavior.Forever;
+textVisual.StartAnimation("Offset", offsetAnimation);
+
+ContainerVisual container = compositor.CreateContainerVisual();
+ElementCompositionPreview.SetElementChildVisual(SpriteHost, container);

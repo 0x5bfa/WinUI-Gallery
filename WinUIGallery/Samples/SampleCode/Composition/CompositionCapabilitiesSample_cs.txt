@@ -1,0 +1,15 @@
+CompositionCapabilities capabilities = new CompositionCapabilities();
+
+if (capabilities.AreEffectsFast())
+{
+    GaussianBlurEffect blurEffect = new GaussianBlurEffect
+    {
+        Source = new CompositionEffectSourceParameter("Source"),
+        BlurAmount = 6.0f,
+        BorderMode = EffectBorderMode.Hard,
+        Optimization = EffectOptimization.Balanced
+    };
+
+    CompositionEffectBrush brush = compositor.CreateEffectFactory(blurEffect).CreateBrush();
+    brush.SetSourceParameter("Source", surfaceBrush);
+}

@@ -1,0 +1,3 @@
+<Grid x:Name="SpriteHost" Height="150">
+    <TextBlock Text="Composition visuals can be hosted below this XAML element." />
+</Grid>

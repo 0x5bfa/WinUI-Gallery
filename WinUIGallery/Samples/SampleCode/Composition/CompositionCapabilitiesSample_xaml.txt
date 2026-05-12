@@ -1,0 +1,7 @@
+<ToggleSwitch x:Name="CapabilityToggle"
+              IsOn="True"
+              Toggled="CapabilityToggle_Toggled" />
+
+<Grid x:Name="ImageCanvas"
+      Height="320"
+      SizeChanged="ImageCanvas_SizeChanged" />
